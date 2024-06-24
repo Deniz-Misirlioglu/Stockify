@@ -1,0 +1,74 @@
+body {
+  font-family: 'Chivo Mono', monospace;
+
+}
+
+.navbar, .navbar-inverse {
+  border-color: #000000 !important;
+  background-color:  #024297 !important;
+  font-size:medium;
+  border-radius: 0 !important;
+
+  padding:5px
+}
+
+nav li {
+  margin-left: 40px;
+}
+
+nav ul li a{
+  color:white !important;
+}
+
+
+ul li a {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+ul li a:after {
+  display: block;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '.';
+  color: transparent;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  
+}
+ul li a:hover:after {
+  -webkit-animation: circle 1s ease-in forwards;
+}
+
+
+/* Keyframes */
+@-webkit-keyframes circle {
+  0% {
+    width: 1px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 1px;
+    z-index: -1;
+    background: #eee;
+    border-radius: 100%;
+  }
+  100% {
+    background: #050505;
+    height: 5000%;
+    width: 5000%;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}

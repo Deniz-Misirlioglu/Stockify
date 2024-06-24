@@ -1,0 +1,247 @@
+body {
+
+  background: url('https://4kwallpapers.com/images/wallpapers/macos-monterey-stock-blue-light-layers-5k-7680x4320-5898.jpg') no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 10;
+}
+
+#title {
+
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  left: 80px;
+  width: 300px;
+  padding: 10px;
+  border: 3px solid #030303;
+  font-size: 50px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#title,
+#about,
+#socials,
+#about2 {
+  animation: flow 5s infinite;
+  display: inline-block;
+  animation-delay: calc(0.05s * var(--index));
+
+  background: none no-repeat scroll 0 0 #a59e9e;
+}
+
+#curr,
+#date,
+#currNews {
+  animation: flow2 8s infinite;
+  display: inline-block;
+  animation-delay: calc(0.05s * var(--index));
+}
+
+#about {
+
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: white;
+  left: 80px;
+  width: 300px;
+  padding: 10px;
+  border: 3px solid #030303;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+}
+
+
+#socials {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: white;
+  position: absolute;
+  left: 80px;
+  width: 300px;
+  padding: 10px;
+  border: 3px solid #030303;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 20px;
+
+}
+
+#about2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(2, 2, 2);
+  position: absolute;
+  left: 80px;
+  width: 300px;
+  padding: 10px;
+  border: 3px solid #030303;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+
+  background: none no-repeat scroll 0 0 #a59e9e;
+}
+
+#caro {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(0, 0, 0);
+  right: 104px;
+  width: 62%;
+  border: 3px solid #030303;
+  font-size: 50px;
+  text-align: center;
+  border-radius: 20px;
+  float: right;
+  top: 80px;
+  background: none no-repeat scroll 0 0 #024297;
+  position: absolute;
+
+  overflow: hidden;
+}
+
+#caro img {
+  width: 100%;
+  /* or any custom size */
+  height: 100%;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1200px) {
+
+  #caro {
+    margin-top: 520px;
+    /* add some space between the "current" div and the previous div */
+  }
+
+
+}
+
+
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .5
+  }
+
+  to {
+    opacity: 2
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .5
+  }
+
+  to {
+    opacity: 2
+  }
+}
+
+@keyframes flow {
+  0% {
+    color: #024297;
+    /* Starting color */
+  }
+
+  20% {
+    color: #024297;
+    /* Second color */
+  }
+
+  40% {
+    color: #030303;
+    /* Third color */
+  }
+
+  60% {
+    color: #030303;
+    /* Fourth color */
+  }
+
+  80% {
+    color: #024297;
+    /* Fifth color */
+  }
+
+  100% {
+    color: #024297;
+    /* Ending color */
+  }
+}
+
+@keyframes flow2 {
+  0% {
+    color: #024297;
+    /* Starting color */
+  }
+
+  20% {
+    color: #000000;
+    /* Second color */
+  }
+
+  40% {
+    color: #ffffff;
+    /* Third color */
+  }
+
+  60% {
+    color: #024297;
+    /* Fourth color */
+  }
+
+  80% {
+    color: #000000;
+    /* Fifth color */
+  }
+
+  100% {
+    color: #024297;
+    /* Ending color */
+  }
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media-icons a {
+  margin: 0 10px;
+  color: #fff;
+  /* white color */
+  margin-right: 10px;
+}
+
+.social-media-icons a:hover {
+  color: #c0afaf;
+}
+
+.social-media-icons i {
+  font-size: 24px;
+}

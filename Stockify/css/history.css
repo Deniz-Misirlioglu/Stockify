@@ -1,0 +1,198 @@
+#fullHistory {
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    width: 350px;
+    padding: 10px;
+    border: 3px solid #030303;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: auto;
+    display: inline-block;
+    justify-content: center;
+    background: none no-repeat scroll 0 0 #a59e9e;
+    left: 5px;
+}
+
+
+input[type=range] {
+    width: 100% !important;
+    height: 20px;
+}
+
+#firstDIv {
+    margin-bottom: 30px;
+}
+
+
+#centerthis {}
+
+#querySearch {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(0, 0, 0);
+    border-bottom-style: none;
+    border-top: 3px solid #030303;
+    font-size: 20px;
+    border-radius: 5px;
+    padding-left: 50%;
+    padding: 10px;
+    align-content: center;
+}
+
+#stockNews2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    right: 10px;
+    width: 680px;
+    padding: 10px;
+    border: 3px solid #030303;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: auto;
+    height: 1070px;
+    display: inline-block;
+    overflow: auto;
+    top: 0px;
+    background: none no-repeat scroll 0 0 #a59e9e;
+
+
+}
+
+#desc4 {
+    height: 100%;
+}
+
+table::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* Hide scrollbar thumb except when hovering */
+table::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+table::-webkit-scrollbar-thumb:hover {
+    background-color: black;
+}
+
+#fullHistory1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    width: 350px;
+    height: 515px;
+    overflow: auto;
+    padding: 10px;
+    border: 3px solid #030303;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 10px;
+    margin: auto;
+    display: inline-block;
+    justify-content: center;
+    background: none no-repeat scroll 0 0 #a59e9e;
+    left: 365px;
+
+}
+
+#bigfint {
+    font-size: 25px;
+    padding: 0px;
+}
+
+td {
+    font-size: 15px
+}
+
+#current2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    right: 10px;
+    width: 680px;
+    padding: 10px;
+    border: 3px solid #030303;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: auto;
+    display: inline-block;
+    overflow: hidden;
+    top: 0px;
+    background: none no-repeat scroll 0 0 #a59e9e;
+}
+
+@media screen and (max-width: 1280px) {
+
+    /*#current2 {
+        margin-top: 1200px;
+     add some space between the "current" div and the previous div 
+        width: 350px;
+        left: 80px;
+    } */
+
+    #fullHistory1 {
+        position: relative;
+        /* add some space between the "current" div and the previous div */
+        left: 55px;
+        float: left;
+    }
+
+    #fullHistory {
+        position: relative;
+        /* add some space between the "current" div and the previous div */
+        left: 55px;
+
+    }
+
+
+
+    th,
+    td {
+        display: block;
+    }
+
+    th {
+        text-align: center;
+    }
+
+    td {
+        border-bottom: none;
+        text-align: center;
+    }
+
+    td:before {
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #fullHistory1 {
+        position: relative;
+        left: 55px;
+        top: 10px;
+    }
+
+    #current2 {
+        position: absolute;
+        width: 350px;
+        left: 20px;
+        top: 530px;
+    }
+
+    #stockNews2 {
+        position: absolute;
+        width: 350px;
+        left: 20px;
+        top: 530px;
+    }
+
+
+
+}

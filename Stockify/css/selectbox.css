@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+
+
+table {
+  text-align: left;
+}
+
+#header-container {
+  display: block;
+  position: absolute;
+  width: 320px;
+  height: 55px;
+  left: 50%;
+  top: 50%;
+  margin-left: -160px;
+  margin-top: -87px;
+}
+
+/* Select style here */
+
+select {
+  margin: 0 auto;
+  color: #EC6F66;
+  width: 250px;
+  height: 25px;
+  cursor: pointer;
+  text-align: center;
+}
+
+select:hover {
+  background-color: transparent;
+  color: white;
+  padding: 15px 5px 15px 25px;
+}
+
+select option {
+  background-color: white;
+  color: gray;
+  width: 310px;
+  padding: 10px 15px;
+  height: 20px;
+  cursor: pointer;
+}
+
+select option:hover {
+  padding-left: 25px;
+  width: 270px;
+  color: #EC6F66;
+}
