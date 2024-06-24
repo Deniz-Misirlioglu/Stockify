@@ -1,0 +1,1 @@
+Created a full stack web application with the use of Polygons.io stock retrieval API letting users pick an exchange, and stock to view data. All history of a stock was then stored into a database hosted by SQL lite which allowed users to view previous prices and show all analytical data. PHP was used for database communcation and the application was developed with HTML and CSS
