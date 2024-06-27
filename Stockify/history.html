@@ -1,331 +1,330 @@
-<!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<!--
+  <!--
     Modified from the Debian original for Ubuntu
     Last updated: 2016-11-16
     See: https://launchpad.net/bugs/1288690
   -->
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>CSE383 Final Project</title>
-    <link rel="stylesheet" href="./css/body.css">
-    <link rel="stylesheet" href="./css/navbar.css">
-    <link rel="stylesheet" href="./css/selectbox.css">
-    <link rel="stylesheet" href="./css/stock.css">
-    <link rel="stylesheet" href="./css/history.css">
+    <link rel="stylesheet" href="./css/body.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/selectbox.css" />
+    <link rel="stylesheet" href="./css/stock.css" />
+    <link rel="stylesheet" href="./css/history.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="script1.js"></script>
-</head>
+  </head>
 
-<header>
+  <header>
     <div class="navbarhead">
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">Stockify</a>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="stocks.html">Stocks</a></li>
-                        <li><a href="history.html">History</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target="#myNavbar"
+            >
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Stockify</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="stocks.html">Stocks</a></li>
+              <li><a href="history.html">History</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
-</header>
+  </header>
 
-<body>
+  <body>
     <div class="container-fluid">
-        <div id="fullHistory">
-            <div class="row">
-
-                <div><label for="stock-exchanges">Stock Data History</label></div><br>
-                <div class="col-lg-12" id="firstDIv">Input a search date, and the number of lines to view past data of
-                    all
-                    requests made during that date</div>
-            </div>
-            <div class="row" id="querySearch">
-                <div class="col-lg-12" id="centerthis">
-
-                    <div id="">Input Date: </div>
-                    <div><input type="date" id="calDate" name="" value="2023-04-22" min="2023-04-01" max="2023-05-31">
-                    </div>
-                </div>
-            </div>
-            <div class="row" id="querySearch">
-                <div class="col-lg-12" id="">
-                    <div id="">Number of Lines: </div>
-                    <input type="range" id="slider" value="24" min="1" max="100"
-                        oninput="this.nextElementSibling.value = this.value">
-                    <output>24</output>
-                </div>
-            </div>
-            <div class="row" id="querySearch">
-                <div class="col-lg-12" id="but">
-                    <button class="getstockDataB" id="glow-on-hover">Search</button>
-                </div>
-            </div>
+      <div id="fullHistory">
+        <div class="row">
+          <div><label for="stock-exchanges">Stock Data History</label></div>
+          <br />
+          <div class="col-lg-12" id="firstDIv">
+            Input a search date, and the number of lines to view past data of
+            all requests made during that date
+          </div>
         </div>
+        <div class="row" id="querySearch">
+          <div class="col-lg-12" id="centerthis">
+            <div id="">Input Date:</div>
+            <div>
+              <input
+                type="date"
+                id="calDate"
+                name=""
+                value="2023-04-22"
+                min="2023-04-01"
+                max="2023-05-31"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row" id="querySearch">
+          <div class="col-lg-12" id="">
+            <div id="">Number of Lines:</div>
+            <input
+              type="range"
+              id="slider"
+              value="24"
+              min="1"
+              max="100"
+              oninput="this.nextElementSibling.value = this.value"
+            />
+            <output>24</output>
+          </div>
+        </div>
+        <div class="row" id="querySearch">
+          <div class="col-lg-12" id="but">
+            <button class="getstockDataB" id="glow-on-hover">Search</button>
+          </div>
+        </div>
+      </div>
 
-        <div class="row" id="fullHistory1">
+      <div class="row" id="fullHistory1">
+        <div><label for="stock-exchanges">History</label></div>
+        <br />
+        <div class="col-lg-12" id="but">
+          <div id="table1">
+            <table class="table" id="table2">
+              <tr>
+                <thead>
+                  <th>Stock</th>
+                  <th>Date/Time</th>
+                  <th>QueryType</th>
+                  <th>----</th>
+                </thead>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
 
-            <div><label for="stock-exchanges">History</label></div><br>
-            <div class="col-lg-12" id="but">
+      <div id="entireData2">
+        <div class="row">
+          <div class="col-lg-11" id="but">
+            <div id="current2">
+              <button class="left-arrow" onclick="showData()"></button>
+              <button class="right-arrow" onclick="showDes()"></button>
 
-                <div id="table1">
-                    <table class="table" id="table2">
-                        <tr>
-                            <thead>
-                                <th>Stock</th>
-                                <th>Date/Time</th>
-                                <th>QueryType</th>
-                                <th>----</th>
-                            </thead>
-                        </tr>
+              <div id="descrip3"></div>
+
+              <div id="fullData">
+                <p>Currently Displaying :</p>
+                <p id="curr">N/A</p>
+                <p>for</p>
+                <p id="date">N/A</p>
+                <div id="stockprice">
+                  <table>
+                    <tr>
+                      <td>
+                        <p>Open price:</p>
+                        <p id="currency">N/A</p>
+                      </td>
+                      <td>
+                        <p>Volume:</p>
+                        <p id="volume">N/A</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>High price:</p>
+                        <p id="high">N/A</p>
+                      </td>
+                      <td>
+                        <p>High price % Change:</p>
+                        <p id="highchange">N/A</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>Low price:</p>
+                        <p id="low">N/A</p>
+                      </td>
+                      <td>
+                        <p>Low price % Change:</p>
+                        <p id="lowchange">N/A</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>Close price:</p>
+                        <p id="close">N/A</p>
+                      </td>
+                      <td>
+                        <p>Daily % Change:</p>
+                        <p id="dailychange">N/A</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p id="history">Stock Price Aggregates</p>
+                      </td>
+                    </tr>
+                  </table>
+                  <canvas id="cnva" width="150" height="50"></canvas>
+                  <div id="prev">
+                    <p>Previous Stock Prices</p>
+                    <table class="table">
+                      <tr>
+                        <td></td>
+                        <td id="prevTable1" class="padd"></td>
+                        <td id="prevTable2" class="padd"></td>
+                        <td id="prevTable3" class="padd"></td>
+                        <td id="prevTable4" class="padd"></td>
+                        <td id="prevTable5" class="padd"></td>
+                        <td id="prevTable6" class="padd"></td>
+                      </tr>
+                      <tr>
+                        <td id="prevTable">Open Price</td>
+                        <td id="prevTable00" class="padd"></td>
+                        <td id="prevTable11" class="padd"></td>
+                        <td id="prevTable22" class="padd"></td>
+                        <td id="prevTable33" class="padd"></td>
+                        <td id="prevTable44" class="padd"></td>
+                        <td id="prevTable55" class="padd"></td>
+                      </tr>
+                      <tr>
+                        <td id="prevTable">Close Price</td>
+                        <td id="prevTable000" class="padd"></td>
+                        <td id="prevTable111" class="padd"></td>
+                        <td id="prevTable222" class="padd"></td>
+                        <td id="prevTable333" class="padd"></td>
+                        <td id="prevTable444" class="padd"></td>
+                        <td id="prevTable555" class="padd"></td>
+                      </tr>
                     </table>
+                  </div>
                 </div>
+                <canvas id="recentGraph" width="150" height="50"></canvas>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
 
+      <div id="entireNews1">
+        <div class="row">
+          <div class="col-lg-12" id="but">
+            <div id="stockNews2">
+              <button class="left-arrow" onclick="showNews()"></button>
+              <button class="right-arrow" onclick="showDes2()"></button>
 
-        <div id="entireData2">
-            <div class="row">
-                <div class="col-lg-12" id="but">
+              <div id="descrip4"></div>
+              <div id="newsnews">
+                <p>Currently Displaying Recent News for :</p>
+                <p id="currNews">N/A</p>
+                <div id="newsFormat">
+                  <div id="prev1">
+                    <div id="complogo0"></div>
+                    <div id="author0"></div>
+                    <div id="date0"></div>
+                    <div id="desc0"></div>
+                    <div id="firstNews0"></div>
+                  </div>
 
-                    <div id="current2">
+                  <div id="prev2">
+                    <div id="complogo1"></div>
+                    <div id="author1"></div>
+                    <div id="date1"></div>
+                    <div id="desc1"></div>
+                    <div id="firstNews1"></div>
+                  </div>
 
-                        <button class="left-arrow" onclick="showData()"></button>
-                        <button class="right-arrow" onclick="showDes()"></button>
+                  <div id="prev3">
+                    <div id="complogo2"></div>
+                    <div id="author2"></div>
+                    <div id="date2"></div>
+                    <div id="descTwo"></div>
+                    <div id="firstNews2"></div>
+                  </div>
 
+                  <div id="prev4">
+                    <div id="complogo3"></div>
+                    <div id="author3"></div>
+                    <div id="date3"></div>
+                    <div id="desc3"></div>
+                    <div id="firstNews3"></div>
+                  </div>
 
-                        <div id="descrip3"></div>
+                  <div id="prev5">
+                    <div id="complogo4"></div>
+                    <div id="author4"></div>
+                    <div id="date4"></div>
+                    <div id="desc4"></div>
+                    <div id="firstNews4"></div>
+                  </div>
 
-                        <div id="fullData">
-                            <p>Currently Displaying : </p>
-                            <p id="curr">N/A </p>
-                            <p>for </p>
-                            <p id="date">N/A </p>
-                            <div id="stockprice">
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <p>Open price:</p>
-                                            <p id='currency'>N/A</p>
-                                        </td>
-                                        <td>
-                                            <p>Volume:</p>
-                                            <p id='volume'>N/A</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>High price:</p>
-                                            <p id='high'>N/A</p>
-                                        </td>
-                                        <td>
-                                            <p>High price % Change:</p>
-                                            <p id='highchange'>N/A</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>Low price:</p>
-                                            <p id='low'>N/A</p>
-                                        </td>
-                                        <td>
-                                            <p>Low price % Change:</p>
-                                            <p id='lowchange'>N/A</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>Close price:</p>
-                                            <p id='close'>N/A</p>
-                                        </td>
-                                        <td>
-                                            <p>Daily % Change:</p>
-                                            <p id='dailychange'>N/A</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p id="history">Stock Price Aggregates</p>
-                                        </td>
-                                    </tr>
+                  <div id="prev6">
+                    <div id="complogo5"></div>
+                    <div id="author5"></div>
+                    <div id="date5"></div>
+                    <div id="desc5"></div>
+                    <div id="firstNews5"></div>
+                  </div>
 
-                                </table>
-                                <canvas id="cnva" width="150" height="50"></canvas>
-                                <div id="prev">
-                                    <p>Previous Stock Prices</p>
-                                    <table class="table">
+                  <div id="prev7">
+                    <div id="complogo6"></div>
+                    <div id="author6"></div>
+                    <div id="date6"></div>
+                    <div id="desc6"></div>
+                    <div id="firstNews6"></div>
+                  </div>
 
-                                        <tr>
-                                            <td></td>
-                                            <td id="prevTable1" class="padd"></td>
-                                            <td id="prevTable2" class="padd"></td>
-                                            <td id="prevTable3" class="padd"></td>
-                                            <td id="prevTable4" class="padd"></td>
-                                            <td id="prevTable5" class="padd"></td>
-                                            <td id="prevTable6" class="padd"></td>
-                                        </tr>
-                                        <tr>
-                                            <td id="prevTable">Open Price</td>
-                                            <td id="prevTable00" class="padd"></td>
-                                            <td id="prevTable11" class="padd"></td>
-                                            <td id="prevTable22" class="padd"></td>
-                                            <td id="prevTable33" class="padd"></td>
-                                            <td id="prevTable44" class="padd"></td>
-                                            <td id="prevTable55" class="padd"></td>
-                                        </tr>
-                                        <tr>
-                                            <td id="prevTable">Close Price</td>
-                                            <td id="prevTable000" class="padd"></td>
-                                            <td id="prevTable111" class="padd"></td>
-                                            <td id="prevTable222" class="padd"></td>
-                                            <td id="prevTable333" class="padd"></td>
-                                            <td id="prevTable444" class="padd"></td>
-                                            <td id="prevTable555" class="padd"></td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                            <canvas id="recentGraph" width="150" height="50"></canvas>
-                        </div>
-                    </div>
+                  <div id="prev8">
+                    <div id="complogo7"></div>
+                    <div id="author7"></div>
+                    <div id="date7"></div>
+                    <div id="desc7"></div>
+                    <div id="firstNews7"></div>
+                  </div>
+
+                  <div id="prev9">
+                    <div id="complogo8"></div>
+                    <div id="author8"></div>
+                    <div id="date8"></div>
+                    <div id="desc8"></div>
+                    <div id="firstNews8"></div>
+                  </div>
+
+                  <div id="prev10">
+                    <div id="complogo9"></div>
+                    <div id="author9"></div>
+                    <div id="date9"></div>
+                    <div id="desc9"></div>
+                    <div id="firstNews9"></div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-
-        <div id="entireNews1">
-            <div class="row">
-                <div class="col-lg-12" id="but">
-
-                    <div id="stockNews2">
-                        <button class="left-arrow" onclick="showNews()"></button>
-                        <button class="right-arrow" onclick="showDes2()"></button>
-
-
-                        <div id="descrip4"></div>
-                        <div id="newsnews">
-                            <p>Currently Displaying Recent News for : </p>
-                            <p id="currNews">N/A </p>
-                            <div id="newsFormat">
-
-
-                                <div id="prev1">
-                                    <div id="complogo0"></div>
-                                    <div id="author0"></div>
-                                    <div id="date0"></div>
-                                    <div id="desc0"></div>
-                                    <div id="firstNews0"></div>
-
-                                </div>
-
-                                <div id="prev2">
-                                    <div id="complogo1"></div>
-                                    <div id="author1"></div>
-                                    <div id="date1"></div>
-                                    <div id="desc1"></div>
-                                    <div id="firstNews1"></div>
-
-                                </div>
-
-
-                                <div id="prev3">
-                                    <div id="complogo2"></div>
-                                    <div id="author2"></div>
-                                    <div id="date2"></div>
-                                    <div id="descTwo"></div>
-                                    <div id="firstNews2"></div>
-
-                                </div>
-
-
-                                <div id="prev4">
-                                    <div id="complogo3"></div>
-                                    <div id="author3"></div>
-                                    <div id="date3"></div>
-                                    <div id="desc3"></div>
-                                    <div id="firstNews3"></div>
-
-                                </div>
-
-
-                                <div id="prev5">
-                                    <div id="complogo4"></div>
-                                    <div id="author4"></div>
-                                    <div id="date4"></div>
-                                    <div id="desc4"></div>
-                                    <div id="firstNews4"></div>
-
-                                </div>
-
-
-                                <div id="prev6">
-                                    <div id="complogo5"></div>
-                                    <div id="author5"></div>
-                                    <div id="date5"></div>
-                                    <div id="desc5"></div>
-                                    <div id="firstNews5"></div>
-
-                                </div>
-
-
-                                <div id="prev7">
-                                    <div id="complogo6"></div>
-                                    <div id="author6"></div>
-                                    <div id="date6"></div>
-                                    <div id="desc6"></div>
-                                    <div id="firstNews6"></div>
-
-                                </div>
-
-                                <div id="prev8">
-                                    <div id="complogo7"></div>
-                                    <div id="author7"></div>
-                                    <div id="date7"></div>
-                                    <div id="desc7"></div>
-                                    <div id="firstNews7"></div>
-
-                                </div>
-
-                                <div id="prev9">
-                                    <div id="complogo8"></div>
-                                    <div id="author8"></div>
-                                    <div id="date8"></div>
-                                    <div id="desc8"></div>
-                                    <div id="firstNews8"></div>
-
-                                </div>
-
-                                <div id="prev10">
-                                    <div id="complogo9"></div>
-                                    <div id="author9"></div>
-                                    <div id="date9"></div>
-                                    <div id="desc9"></div>
-                                    <div id="firstNews9"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
